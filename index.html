@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+
+    <title>Sitio web emulador</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+
+
+    <script>
+        function crearTabla(obj) {
+          alert(JSON.stringify(obj, undefined, 2))
+        }
+    
+        function buscarAJAX() {
+          $.ajax({
+            type: 'GET',
+            url: 'http://localhost:8000/api/list/all',
+            dataType: 'json',
+            data: $('#formulario').serialize(),
+            success: crearTabla
+          })
+        }
+      </script>
+
+
+</head>
+<body>
+
+  <div class="cabezera">      
+    <header>
+        <div class="img-logo"><a href="index.html" id="logo">
+            <img src="img/pics/GK-logo-normal.png"
+            alt="Logo GK"
+          />
+        </a>
+    </div>
+    </header>
+
+    <div class="topnav" id="myTopnav">
+        <a href="https://gk.city/membresia/" class="" target="_blank">Membresia</a>
+        <a href="https://gk.city/coronavirus-ecuador/" class="" target="_blank">Coronavirus</a>
+        <a href="https://gk.city/tag/medio-ambiente/" class="" target="_blank">Medioambiente</a>
+        <a href="https://gk.city/politica/" class="" target="_blank">Política</a>
+        <a href="https://gk.city/tag/genero/" class="" target="_blank">Género</a>
+        <a href="https://gk.city/derechos/" class="" target="_blank">Derechos</a>
+        <a href="https://gk.city/portadas-contexto/" class="" target="_blank">Noticias</a>
+        <a href="https://gk.city/economica/" class="" target="_blank">Ecónomia</a>
+        <a href="https://gk.city/abc-educativo/" class="" target="_blank">Educación</a>
+        <a href="https://gk.city/quiero-comer/" class="" target="_blank">Quiero Comer</a>
+        <a href="https://gk.city/tienda/" class="" target="_blank">Tienda</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      
+    </div>
+        <div id="contenedor">
+            <hr id="linea-secciones">
+            <div>
+            <div class="info" id="noticia-principal">
+                <a href="https://gk.city/2021/08/12/impactos-reforma-arancelaria-ecuador/" id="economia-uno" target="_blank">
+                    <img src="img/pics/imagen1.jpg"
+                    alt="economia1" id="eco-uno"
+                  />
+                </a>
+                <h3><a href="https://gk.city/2021/08/12/impactos-reforma-arancelaria-ecuador/" target="_blank">
+                    La reforma arancelaria, ¿hacia un Ecuador más competitivo?</h3> </a>
+                <h5>Susana Roa Chejín</h5>
+
+                <p>Desde el 1 de agosto de 2021, en Ecuador se aplica la reforma arancelaria de 667 insumos,
+                    materias primas y bienes de capital que el sector productivo importa. El objetivo es que
+                    el país mejore su nivel de competitividad. Este es un análisis de sus posibles consecuencias
+                    e impactos para los sectores afectados.</p>
+                    
+                    <input type="button" value="INSERTAR NOTICIAS" onclick="buscarAJAX()"/>
+            </div>
+
+            
+  
+  <div id="resultados"></div>
+
+            <div class="info" id="informacion">
+                    <div id="info-dos-uno" class="informa">
+                        <a href="https://gk.city/2021/08/04/proceso-para-despenalizar-aborto-violacion/"   target="_blank">
+                            <img src="img/pics/imagen2_1.jpg"
+                            alt="informacion1" class="info-photo"
+                          />
+                        </a>
+                        <a href="https://gk.city/2021/08/10/iza-lasso-exigencias-conaie-fut/" target="_blank">
+                            <img src="img/pics/imagen2_2.jpg"
+                            alt="informacion2" class="info-photo"
+                          />
+                        </a>
+                        <a href="https://gk.city/2021/08/11/jovenes-espacios-publicos-quito/"   target="_blank">
+                            <img src="img/pics/imagen2_3.jpg"
+                            alt="informacion3" class="info-photo"
+                          />
+                        </a>
+                        <a href="https://gk.city/2021/08/09/desnutricion-infantil-ecuador/" target="_blank">
+                            <img src="img/pics/imagen2_4.jpg"
+                            alt="informacion4" class="info-photo"
+                          />
+                        </a>
+
+                   </div>
+                   <div id="info-dos-dos" class="informa">
+                    <p class="info-centr" id="info2_1"><a href="https://gk.city/2021/08/04/proceso-para-despenalizar-aborto-violacion/" target="_blank"><h4>“A pesar de que el aborto por violación es legal, muchas mujeres no han podido acceder a uno seguro”?</h4></a>
+                        <h5>Liz Briceño Pazmiño</h5></p>
+                    <p class="info-centr" id="info2_2"><a href="https://gk.city/2021/08/10/iza-lasso-exigencias-conaie-fut/" target="_blank"><h4>Iza y Lasso, dispuestos a la pelea</h4></a>
+                    <h5>Iván Ulchur-Rota</h5></p>
+                    <p class="info-centr" id="info2_3"><a href="https://gk.city/2021/08/11/jovenes-espacios-publicos-quito/" target="_blank"><h4>Espacio público no tan público</h4></a>
+                        <h5>Mayuri Castro</h5></p>
+                     <p class="info-centr" id="info2_4">  <a href="https://gk.city/2021/08/09/desnutricion-infantil-ecuador/" target="_blank"><h4>La desnutrición infantil, un abismo frente al futuro</h4></a>
+                        <h5>Ana Cristina Basantes</h5></p>
+                  
+
+
+                    </div>
+
+                </div>
+
+
+    <div class="infor" id="noticias">
+            <h4 class="noticia-tres-uno" >
+            <a href="https://gk.city/portadas-contexto/" target="_blank" id="titulo_noticias">
+                LAS NOTICIAS DE HOY, BIEN EXPLICADAS</a>
+            </h4>
+            <p class="noti"><h4>
+            <a href="https://gk.city/2021/08/14/rescate-carlos-arias-exconcejal-ibarra/" target="_blank">
+                Así fue el rescate de Carlos Arias, exconcejal de Ibarra</a>
+            </h4></p>
+            <p class="noti"><h4>
+            <a href="https://gk.city/2021/08/14/procesados-secuestro-exconcejal-ibarra/"  target="_blank">
+                La Fiscalía procesó a 8 personas por presunto secuestro extorsivo de Carlos Arias,
+                exconcejal de Ibarra. Te lo explicamos</a>
+            </h4></p>
+            <p class="noti"><h4 >
+            <a href="https://gk.city/2021/08/14/cronograma-comparecencias-juicio-politico-freddy-carrion/" target="_blank">
+                Este es el cronograma de comparecencias para el juicio político contra Freddy Carrión</a>
+            </h4></p>
+            <p class="noti"><h4>
+            <a href="https://gk.city/2021/08/14/cronograma-comparecencias-juicio-politico-freddy-carrion/" target="_blank">
+                El juicio contra Jorge Yunda por presunto peculado comenzará el 29 de septiembre. Te lo explicamos</a>
+            </h4></p>
+            <p class="noti"><h4 >
+            <a href="https://gk.city/2021/08/14/cronograma-comparecencias-juicio-politico-freddy-carrion/" target="_blank" >
+                Hoy es el Día de lucha contra la violencia sexual en las aulas</a>
+            </h4></p>
+        </div>
+
+
+    <hr id="separacion-1">
+        
+    
+    <div class="entrevistas" id="entrev">
+            <div class="titulo-entrevistas">
+                <p>
+                <a href="https://gk.city/entrevistas-gk-sol-borja/" target="_blank">ENTREVISTAS DIARIAS CON SOL BORJA</a>
+            </p>
+            <hr id="fin-naveg">
+            </div>
+            <div class="entrevista">
+                <a href="https://gk.city/2021/08/12/entrevista-jose-ruales-vacunacion/" target="_blank"><img src="img/entrevista/entrevista1.jpg" alt="primera-entrevista" class="img-entrevista"></a>
+                <p><a href="https://gk.city/2021/08/12/entrevista-jose-ruales-vacunacion/" target="_blank"><h3>José Ruales:“Hubo un pequeño retraso en la llegada de vacunas Sinovac”</h3></a>
+                <h5>12 de agosto de 2021</h5>
+                </p>
+            </div>
+            <div class="entrevista">
+                <a href="https://gk.city/2021/08/11/entrevista-procesos-judiciales-felipe-rodriguez/" target="_blank"><img src="img/entrevista/entrevista2.jpg" alt="segunda-entrevista" class="img-entrevista"></a>
+                <p><a href="https://gk.city/2021/08/11/entrevista-procesos-judiciales-felipe-rodriguez/" target="_blank"><h3>Felipe Rodríguez: “El veredicto de los jueces se ve afectado por la presión de las redes sociales”</h3></a>
+                <h5>11 de agosto de 2021</h5>
+                </p>
+            </div>
+            <div class="entrevista">
+                <a href="https://gk.city/2021/08/10/entrevista-fiscalizacion-asamblea-ana-belen-cordero/" target="_blank"><img src="img/entrevista/entrevista3.jpg" alt="tercera-entrevista" class="img-entrevista"></a>
+                <p><a href="https://gk.city/2021/08/10/entrevista-fiscalizacion-asamblea-ana-belen-cordero/" target="_blank"><h3>Ana Belén Cordero: “Cuando hay un llamado a la ruptura de la paz, el gobierno no va a ceder”</h3></a>
+                <h5>10 de agosto de 2021</h5>
+                </p>
+            </div>
+            <div class="entrevista">
+                <a href="https://gk.city/2021/08/05/entrevista-crisis-alcaldia-santiago-guarderas/" target="_blank"><img src="img/entrevista/entrevista4.jpg" alt="cuarta-entrevista" class="img-entrevista"></a>
+                <p><a href="https://gk.city/2021/08/05/entrevista-crisis-alcaldia-santiago-guarderas/" target="_blank"><h3>Santiago Guarderas “Jorge Yunda me traicionó a mí y al pueblo de Quito”</h3></a>
+                <h5>5 de agosto de 2021</h5>
+                </p>
+
+            </div>
+        
+    </div>
+
+    <div id="membresia"> 
+        <a href="https://gk.city/membresia/" target="_blank"><img src="img/gif-membresia.jpg" alt="gif-membresia" id="img-membresia"></a>
+
+    </div>
+    
+    <div id="nuestros-news">
+        
+        <div id="titulo-news">  <p>RECIBE NUESTROS NEWSLETTERS</p>        </div>
+        <hr id="linea-news">
+        <div class="newsletter"><img src="img/newsletter.png" alt="buzon" id="img-news"> </div>
+        
+        <div class="newsletter" id="news"><ul>
+            <li><a href="https://mailchi.mp/gk/ladiaria" target="_blank"><i class="fa fa-cube"> </i> La diaria</a></li>
+            <li><a href="https://mailchi.mp/gk/lunes" target="_blank"><i class="fa fa-cube"> </i> Lunes</a></li>
+            <li><a href="https://mailchi.mp/gk/nl-politico" target="_blank"><i class="fa fa-cube"> </i> Politico</a></li>
+            <li><a href="https://mailchi.mp/gk/weayyt2dhc" target="_blank"><i class="fa fa-cube"> </i> La Semana en Breve</a></li>
+            <li><a href="https://mailchi.mp/9b1b2108e79b/0ibrdi2x0u" target="_blank"><i class="fa fa-cube"> </i> Mi Hamaca en Marte</a></li>
+            <li><a href="https://mailchi.mp/gk/quierocomer"><i class="fa fa-cube"> </i> Quiero Comer</a></li>
+            <li><a href="https://gk.city/membresia/" target="_blank"><i class="fa fa-cube"> </i> Recomiendo</a></li>
+        </ul>
+    </div>
+
+    </div>
+
+ 
+     <div id="nuestra-cobertura">
+         
+        <div id="titulo-cobertura">  <p>LEE NUESTRA COBERTURA EN</p> </div>
+        <hr id="linea-cobertura">
+        <br>
+        <div id="coberturas">
+        <div class="cobertura"> <a href="https://gk.city/tag/medio-ambiente/"><img src="img/medio-ambiente.png" alt="medio-ambiente"> Medioambiente</a>       </div>
+        
+        <div class="cobertura"> <a href="https://gk.city/tag/genero/"><img src="img/genero.png" alt="medio-ambiente">Género</a>       </div>
+
+        <div class="cobertura"> <a href="https://gk.city/tag/transparencia/"><img src="img/transparencia.png" alt="medio-ambiente">Transparecnia</a>       </div>
+    </div>
+    </div>
+</div>
+
+
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+</body>
+</html>
